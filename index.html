@@ -48,15 +48,14 @@ body{
     background: linear-gradient(135deg,#ffe0f7,#dab6ff,#ffd8c0,#ffb3c1);
     background-size:400% 400%;
     animation: cardGradient 10s ease infinite;
-    padding:40px;
+    padding:30px;
     border-radius:25px;
     box-shadow:0 15px 40px rgba(0,0,0,0.3);
-    max-width:700px;
+    max-width:90%;
+    width:600px;
     z-index:2;
     text-align:center;
 }
-
-/* LETTER CARD GRADIENT ANIMATION */
 @keyframes cardGradient{
     0%{background-position:0% 50%;}
     50%{background-position:100% 50%;}
@@ -73,11 +72,11 @@ h1{
 }
 
 button{
-    padding:15px 30px;
-    font-size:18px;
+    padding:12px 25px;
+    font-size:16px;
     border:none;
     border-radius:12px;
-    margin:15px;
+    margin:10px;
     cursor:pointer;
     transition:0.3s;
 }
@@ -87,10 +86,10 @@ button{
 /* LOVE METER */
 .meter{
     width:100%;
-    height:20px;
+    height:18px;
     background:#eee;
     border-radius:20px;
-    margin-top:20px;
+    margin-top:15px;
 }
 .fill{
     height:100%;
@@ -113,13 +112,15 @@ button{
 .letter-box{
     display:flex;
     align-items:flex-start;
-    gap:30px;
+    gap:20px;
     flex-wrap:wrap;
+    justify-content:center;
 }
 
 .letter-text{
     flex:1;
     text-align:left;
+    min-width:200px;
 }
 
 /* BLOOMING BOUQUET */
@@ -161,6 +162,36 @@ button{
     25%{ transform: rotate(10deg);}
     50%{ transform: rotate(-10deg);}
     75%{ transform: rotate(5deg);}
+}
+
+/* ================================
+   RESPONSIVE
+================================ */
+@media screen and (max-width:600px){
+    h1{
+        font-size:1.5rem;
+    }
+    button{
+        padding:10px 20px;
+        font-size:14px;
+        margin:8px;
+    }
+    .letter-box{
+        flex-direction:column;
+        align-items:center;
+    }
+    .letter-text{
+        text-align:center;
+    }
+    .bouquet{
+        flex-direction:row;
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:8px;
+    }
+    .flower{
+        font-size:28px;
+    }
 }
 </style>
 </head>
